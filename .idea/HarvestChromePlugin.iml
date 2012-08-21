@@ -5,6 +5,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KnockoutJS" level="application" />
+    <orderEntry type="library" name="KnockoutMapping" level="application" />
+    <orderEntry type="library" name="RequireJS" level="application" />
   </component>
 </module>
 

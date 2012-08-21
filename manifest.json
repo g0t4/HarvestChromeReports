@@ -1,0 +1,14 @@
+{
+    "name": "Harvest Reports",
+    "description": "Extra Harvest reports",
+    "version": "1",
+    "app": {
+        "launch": {
+            "local_path": "index.html"
+        }
+    },
+    "icons": {
+        "16": "images/Icon16.png",
+        "128": "images/Icon128.png"
+    }
+}
