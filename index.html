@@ -16,6 +16,9 @@
 <label>Sort
     <select data-bind="options: sortOptions, value: sortOn"></select>
 </label>
+<label>Commitment
+    <select data-bind="options: commitmentGroupingOptions, value: commitmentGroupingOn"></select>
+</label>
 <button data-bind="click: refresh">Load</button>
 <button data-bind="click: clearCaches">Clear Caches</button>
 <table>
