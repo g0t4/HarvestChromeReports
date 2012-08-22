@@ -2,8 +2,51 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <script type="text/javascript" src="lib/requireConfig.js"></script>
     <script type="text/javascript" data-main="lib/index.js" src="lib/require.js"></script>
 </head>
 <body>
+<label>User <input data-bind="value: user"/></label>
+<label>Password <input type="password" data-bind="value: password"/></label>
+<br/>
+<label>Start <input data-bind="value: start"/></label>
+<label>End <input data-bind="value: end"/></label>
+
+<br/>
+<label>Sort
+    <select data-bind="options: sortOptions, value: sortOn"></select>
+</label>
+<button data-bind="click: refresh">Load</button>
+<button data-bind="click: clearCaches">Clear Caches</button>
+<table>
+    <tbody data-bind="foreach: usersWithWork">
+    <tr>
+        <td colspan="2" data-bind="text: name" style="text-align: center"></td>
+    </tr>
+    <tr>
+        <td>
+            <div data-bind="pieChart: chart"></div>
+        </td>
+        <td valign="top">
+            <dl>
+                <dt>Total Hours</dt>
+                <dd data-bind="text: totalHours"></dd>
+                <dt>Total Billable Hours</dt>
+                <dd data-bind="text: totalBillableHours"></dd>
+            </dl>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<table>
+    <caption>Users with no hours</caption>
+    <tbody data-bind="foreach: usersWithoutWork">
+    <tr>
+        <td data-bind="text: name"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
